@@ -13,7 +13,7 @@ export class Mains extends Component {
 				doneWish: false,
 				toggleEdit: false,
 				toggleButton: false,
-				moveTop: false,
+				// moveTop: false,
 			},
 			{
 				id: uuidv4(),
@@ -21,7 +21,7 @@ export class Mains extends Component {
 				doneWish: false,
 				toggleEdit: false,
 				toggleButton: false,
-				moveTop: false,
+				// moveTop: false,
 			},
 			{
 				id: uuidv4(),
@@ -29,7 +29,7 @@ export class Mains extends Component {
 				doneWish: false,
 				toggleEdit: false,
 				toggleButton: false,
-				moveTop: false,
+				// moveTop: false,
 			},
 		],
 		wishInput: "",
@@ -46,7 +46,7 @@ export class Mains extends Component {
 				doneWish: false,
 				toggleEdit: false,
 				toggleButton: false,
-				moveTop: false,
+				// moveTop: false,
 			},
 		];
 		this.setState({
@@ -56,11 +56,11 @@ export class Mains extends Component {
 	};
 
 	handleOnChange = (e) => {
-		if (e.target.type === "checkbox")
-			this.setState({
-				[e.target.name]: e.target.checked,
-			});
-		else
+		// if (e.target.type === "checkbox")
+		// 	this.setState({
+		// 		[e.target.name]: e.target.checked,
+		// 	});
+		// else
 			this.setState({
 				[e.target.name]: e.target.value,
 			});
@@ -84,14 +84,14 @@ export class Mains extends Component {
 		let result = thisWish.findIndex((i) => i.id === id);
 		let unShift = thisWish.unshift(thisWish[result]);
 		let spLice = thisWish.splice(result + 1, 1);
-		if (result && thisMoveTop !== false)
+		// if (result /** && thisMoveTop !== false **/)
 			this.setState({
 				spLice,
 			});
-		else
-			this.setState({
-				result,
-			});
+		// else
+			// this.setState({
+			// 	result,
+			// });
 	};
 
 	handleDone = (id) => {
@@ -107,7 +107,6 @@ export class Mains extends Component {
 	};
 
 	handleEditToggle = (id) => {
-		// console.log(96, id)
 		let n = this.state.wishList.map((i) => {
 			if (i.id === id) {
 				i.toggleEdit = !i.toggleEdit;

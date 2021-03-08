@@ -28,14 +28,17 @@ export class UnOrdList extends Component {
 			<ul>
 				{this.props.wishList.map((i) => {
 					let strikeThroughClass = `${i.doneWish ? "strike-through-done" : ""}`;
+					// let checkBox = `${i.moveTop ? "check-box-background" : ""}`;
 
 					return (
 						<React.Fragment key={i.id}>
 							<input
 								type="checkbox"
-								checked={i.moveTop}
+								// checked={i.moveTop}
 								name="moveTop"
-								onChange={this.props.handleOnChange}
+								style={{ marginRight: 10 }}
+								// className={checkBox}
+								// onChange={this.props.handleOnChange}
 								onClick={() => this.props.handleMoveToggle(i.id)}
 							/>
 							{i.toggleEdit ? (

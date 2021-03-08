@@ -5,3 +5,7 @@
 .strike-through-done {
   text-decoration: line-through;
 }
+
+.check-box-background {
+  background-color: red;
+}
